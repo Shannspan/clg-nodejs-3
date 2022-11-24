@@ -4,19 +4,21 @@
   "description": "CLG Node JS Lesson 3",
   "main": "calculate.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "start": "nodemon calculate.js",
+  "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shannspan/clg-nodejs-3.git"
   },
-  "author": "",
+  "author": "Shannon",
   "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.0.3"
+  },
   "bugs": {
     "url": "https://github.com/Shannspan/clg-nodejs-3/issues"
   },
-  "homepage": "https://github.com/Shannspan/clg-nodejs-3#readme",
-  "devDependencies": {
-    "jest": "^29.3.1"
-  }
+  "homepage": "https://github.com/Shannspan/clg-nodejs-3#readme"
 }
