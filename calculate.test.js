@@ -56,10 +56,10 @@ describe ("Unit tests for checking summation function", () =>
 //         expect(finalIn).not.toBe(false);
 // }),
         
-// further testing with equivilent matcher shows: 
+// further testing with equality matcher shows: 
 // both .not.toBe(false) AND .not.toBe(true) work
 // which does not make sense, 
-// this test is not specific enough try another way
+// this test is not specific enough: try another way
 
 //         it("should return false", () => {
 //         finalIn = calculate.sum(a,'b');
@@ -75,16 +75,31 @@ describe ("Unit tests for checking summation function", () =>
 //second attempt at equality matcher 
 //using more specific language
 
-        it("should return not a number", () => {
-        finalIn = calculate.sum('a',b);
-        expect(finalIn).not.toBe(Number);
-}),
-        it("should return not a number", () => {
-        finalIn = calculate.sum(a,'b');
-        expect(finalIn).not.toBe(Number);   
+//         it("should return not a number", () => {
+//         finalIn = calculate.sum('a',b);
+//         expect(finalIn).not.toBe(Number);
+// }),
+//         it("should return not a number", () => {
+//         finalIn = calculate.sum(a,'b');
+//         expect(finalIn).not.toBe('string');   
         
-}));
+// }));
 
 // npm test still full coverage and all pass
+//troubleshoot with variations results:
+//Still not specific enough as both String and 'string' work
+// as well as Number
+//try another matcher
 
+it("'a' or 'b' should return a string, not a number", () => {
+
+const stringA = 'a';
+const stringB = 'b';
+ 
+expect(stringA).not.toEqual(calculate),
+expect(stringB).not.toEqual(calculate)
+
+}))
+
+// above works and is specific
 
