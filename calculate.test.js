@@ -22,6 +22,7 @@ const b = 5;
 
 
 describe ("Unit tests for checking summation function", () => 
+        
         it("should return 11", () => {
         sumIn = calculate.sum(a,b);
         expect(sumIn).toBe(11);
@@ -40,13 +41,50 @@ describe ("Unit tests for checking summation function", () =>
         it("should return 30", () => {
         multIn = calculate.multiply(a,b);
         expect(multIn).toBe(30);
-}));
+}),
+
+// next create failing test, using equality matcher
+//the below works, however
+//.not.toBe(true) works but
+//toBe(false) does not
+// aren't these 2 equivilent to each other? 
+
+//         it("should return false", () => {
+//         finalIn = calculate.sum('a',b);
+//         //check finalIn to trouble shoot 'expect'
+//         //console.log(finalIn);
+//         expect(finalIn).not.toBe(false);
+// }),
+        
+// further testing with equivilent matcher shows: 
+// both .not.toBe(false) AND .not.toBe(true) work
+// which does not make sense, 
+// this test is not specific enough try another way
+
+//         it("should return false", () => {
+//         finalIn = calculate.sum(a,'b');
+//         expect(finalIn).not.toBe(true);   
+
+// }));
 
 // $ npm test,
 // returns 100% coverage for all file elements
 // Test Suites: 1 passed, 1 total
-// Tests:       3 passed, 3 total
-// Snapshots:   0 total
-// Time:        0.408 s
+//Tests:       5 passed, 5 total
+
+//second attempt at equality matcher 
+//using more specific language
+
+        it("should return not a number", () => {
+        finalIn = calculate.sum('a',b);
+        expect(finalIn).not.toBe(Number);
+}),
+        it("should return not a number", () => {
+        finalIn = calculate.sum(a,'b');
+        expect(finalIn).not.toBe(Number);   
+        
+}));
+
+// npm test still full coverage and all pass
 
 
