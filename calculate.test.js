@@ -34,7 +34,7 @@ describe ("Unit tests for checking summation function", () =>
 //now create unit tests for the subtraction and multiplication
 
         it("should return 1", () => {
-        subIn = calculate.subtract(a,b);
+        subIn = calculate.minus(a,b);
         expect(subIn).toBe(1);
 }),
 

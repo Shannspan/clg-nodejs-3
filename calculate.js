@@ -4,7 +4,7 @@ const calculate = {
     sum: function(a,b) {
         return a + b;
     },
-    subtract: function(a,b) {
+    minus: function(a,b) {
         return a - b;
     },
     multiply: function(a,b) {
