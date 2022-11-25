@@ -13,7 +13,8 @@ const { calculate } = require('./calculate');
 
 //write a test for adding 2 numbers and validate the expected result
 
-//declare a & b
+//declare a & b, I have decided to use the same numbers for
+//each calculation so using constants
 
 const a = 6;
 const b = 5;
@@ -25,26 +26,20 @@ describe ("Unit tests for checking summation function", () =>
         expect(sumIn).toBe(11);
 }),
 
+//npm run test successful after several errors. 
+//Note: sumIn = sum(a,b); did not work (calculate.sum works)
+
+//now create unti tests for the subtraction and multiplication
+
         it("should return 1", () => {
         subIn = calculate.subtract(a,b);
         expect(subIn).toBe(1);
 }),
 
         it("should return 30", () => {
-        timesIn = calculate.subtract(a,b);
-        expect(timesIn).toBe(30);
+        multIn = calculate.multiply(a,b);
+        expect(multIn).toBe(30);
 }));
 
-//npm run test successful after several errors. 
-//Note: sumIn = sum(a,b); did not work (calculate.sum works)
-
-
-
-
-  
-//     it("should return false", () => {
-//        finalIn = calculate.sum(a,'b');
-//        expect(finalIn).toBe(false);
-// });
 
 

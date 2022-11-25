@@ -9,7 +9,8 @@ const calculate = {
     },
     multiply: function(a,b) {
         return a * b;
-    }};
+    }
+}
 //using common.js module.export to 'move' variable data
 module.exports = { calculate }
 
