@@ -8,7 +8,8 @@
 
 const { calculate } = require('./calculate');
 
-//below used to confirm require working 
+//below used to confirm require working, 
+//initial trouble shooting
 // console.log(calculate);
 
 //write a test for adding 2 numbers and validate the expected result
@@ -29,7 +30,7 @@ describe ("Unit tests for checking summation function", () =>
 //npm run test successful after several errors. 
 //Note: sumIn = sum(a,b); did not work (calculate.sum works)
 
-//now create unti tests for the subtraction and multiplication
+//now create unit tests for the subtraction and multiplication
 
         it("should return 1", () => {
         subIn = calculate.subtract(a,b);
@@ -41,5 +42,11 @@ describe ("Unit tests for checking summation function", () =>
         expect(multIn).toBe(30);
 }));
 
+// $ npm test,
+// returns 100% coverage for all file elements
+// Test Suites: 1 passed, 1 total
+// Tests:       3 passed, 3 total
+// Snapshots:   0 total
+// Time:        0.408 s
 
 
