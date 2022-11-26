@@ -4,12 +4,14 @@ const calculate = {
     sum: function(a,b) {
         return a + b;
     },
+    //change function from subtract to minus to fix ts error
     minus: function(a,b) {
         return a - b;
     },
     multiply: function(a,b) {
         return a * b;
     }
+    
 }
 //using common.js module.export to 'move' variable data
 module.exports = { calculate }

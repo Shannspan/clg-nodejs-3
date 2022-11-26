@@ -41,7 +41,7 @@ describe ("Unit tests for checking summation function", () =>
         it("should return 30", () => {
         multIn = calculate.multiply(a,b);
         expect(multIn).toBe(30);
-}),
+
 
 // next create failing test, using equality matcher
 //the below works, however
@@ -90,16 +90,38 @@ describe ("Unit tests for checking summation function", () =>
 //Still not specific enough as both String and 'string' work
 // as well as Number
 //try another matcher
+//
+// it("'a' or 'b' should return a string, not a number", () => {
 
-it("'a' or 'b' should return a string, not a number", () => {
+// const stringA = 'a';
+// const stringB = 'b';
 
-const stringA = 'a';
-const stringB = 'b';
- 
-expect(stringA).not.toEqual(calculate),
-expect(stringB).not.toEqual(calculate)
+// expect(stringA).not.toEqual(calculate),
+// expect(stringB).not.toEqual(calculate)
 
-}))
-
+// }))
+//
 // above works and is specific
-
+// can't think of variants that would interfere in this case as yet
+//
+// however a a try catch block is best practice 
+// and also provides feedback 
+//This is called throwing the error back to the centre.
+//calling the function done in a try catch block as well to contain errors
+function increment(num) {
+    if (typeof num !== 'number') {
+        //create new error object    
+        throw new Error(`Expected number but got: ${typeof num}`); 
+        //use backticks inside these () for throw new Error
+    }
+    return num + 1;
+} 
+    try {var result = increment('This is a string');    
+    console.log(result);
+}   catch (err) {
+    console.log(err.message);
+};
+}));
+//Still 100% coverage, console.log working
+//Test Suites: 1 passed, 1 total
+//Tests:       3 passed, 3 total

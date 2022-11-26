@@ -1,8 +1,8 @@
 TN:
 SF:calculate.js
 FN:4,(anonymous_0)
-FN:7,(anonymous_1)
-FN:10,(anonymous_2)
+FN:8,(anonymous_1)
+FN:11,(anonymous_2)
 FNF:3
 FNH:3
 FNDA:1,(anonymous_0)
@@ -10,9 +10,9 @@ FNDA:1,(anonymous_1)
 FNDA:1,(anonymous_2)
 DA:3,1
 DA:5,1
-DA:8,1
-DA:11,1
-DA:15,1
+DA:9,1
+DA:12,1
+DA:16,1
 LF:5
 LH:5
 BRF:0
